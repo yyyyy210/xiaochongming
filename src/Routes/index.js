@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react'
 import { Router } from 'dva/router';
 import App from './app'
 //import Home from 'App/Home'
-import {Xcm,ViewSpot,Error,Login,FarmIndex,FarmHome,FarmView,FarmHouse,FarmHousePayment,GatherIndex,GatherView,FootIndex,FootView,DishPackage} from 'App'
+import {Xcm,ViewSpot,Error,Login,FarmIndex,FarmHome,FarmView,FarmHouse,FarmHousePayment,GatherIndex,GatherView,FootIndex,FootView,DishPackage,AccountUser} from 'App'
 
 const cached = {}
 const registerModel = (app, model) => {
@@ -34,6 +34,7 @@ const Routers = function ({ history, app }) {
         FootIndex(),
         FootView(),
         Login(),
+        AccountUser(model => registerModel(app, model)),
         {
           path: '*',
           name: 'error',

@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react'
 import { connect } from 'dva'
-import { NavBar, Icon } from 'antd-mobile';
+import { NavBar } from 'antd-mobile';
 
 import './style.less'
 

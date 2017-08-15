@@ -4,10 +4,19 @@ const pxtorem = require('postcss-pxtorem')
 const pxtorem2 = _interopRequireDefault(pxtorem).default;
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+const path = require('path');
+const svgSpriteDirs = [
+  require.resolve('antd-mobile').replace(/warn\.js$/, ''), // antd-mobile 内置svg
+  path.resolve(__dirname, 'src/Assets/icon'),  // 业务代码本地私有 svg 存放目录
+];
+
+console.log(svgSpriteDirs)
+
 export default {
   "entry": "src/index.js",
   "disableCSSModules": true,
   "publicPath": "/kai/",
+  "svgSpriteLoaderDirs": svgSpriteDirs,
   //"multipage": true,//提取公共打开会导致webpackJsonp is not defined
   "autoprefixer": {
     "browsers": [
@@ -30,8 +39,8 @@ export default {
       "extraBabelPlugins": [
         "dva-hmr",
         "transform-runtime",
-        ["import", { "style": "css", "libraryName": "antd-mobile" ,"libraryDirectory": "lib"}],
-        ["module-resolver", {"root": ["./src"],"alias": {"underscore": "lodash"}}]
+        ["import", { "style": "css", "libraryName": "antd-mobile", "libraryDirectory": "lib" }],
+        ["module-resolver", { "root": ["./src"], "alias": { "underscore": "lodash" } }]
       ],
       extraPostCSSPlugins: [
         pxtorem2({ rootValue: 100, propWhiteList: [], })
@@ -40,8 +49,8 @@ export default {
     "production": {
       "extraBabelPlugins": [
         "transform-runtime",
-        ["import", { "style": "css", "libraryName": "antd-mobile" ,"libraryDirectory": "lib"}],
-        ["module-resolver", {"root": ["./src"],"alias": {"underscore": "lodash"}}]
+        ["import", { "style": "css", "libraryName": "antd-mobile", "libraryDirectory": "lib" }],
+        ["module-resolver", { "root": ["./src"], "alias": { "underscore": "lodash" } }]
       ],
       extraPostCSSPlugins: [
         pxtorem2({ rootValue: 100, propWhiteList: [], })

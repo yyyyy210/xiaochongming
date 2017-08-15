@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="34px" height="34px" viewBox="0 0 34 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>logout</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="logout">
+            <path d="M10.3358236,10.9510393 C8.88447515,12.5490447 8,14.6712322 8,17 C8,21.9705627 12.0294373,26 17,26 L17,26 C21.9705627,26 26,21.9705627 26,17 C26,14.6952615 25.1336835,12.592862 23.7089219,11.0006731" id="Oval-16" stroke="#2C303C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M16.904541,7.66992188 L17,14.9978232" id="Path-19" stroke="#2C303C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            <rect id="Rectangle-43" x="0" y="0" width="34" height="34"></rect>
+        </g>
+    </g>
+</svg>
